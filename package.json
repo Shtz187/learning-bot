@@ -14,7 +14,7 @@
     "url": "git@github.com:asnapper/learning-bot.git"
   },
   "keywords": [],
-  "author": "Matthias Löffel <matthias.loeffel@gmail.com",
+  "author": "Matthias Löffel <matthias.loeffel@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.8",
