@@ -11,3 +11,8 @@ const server = app.listen(process.env.PORT || 3000, () => {
     const addr = server.address() as AddressInfo
     console.log(`listening on ${addr.address}:${addr.port} [${addr.family}]`)
 })
+
+process.on('SIGINT', () => {
+    console.log('goodbye!')
+    server.close()
+})
