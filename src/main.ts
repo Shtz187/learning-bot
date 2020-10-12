@@ -4,7 +4,9 @@ import { AddressInfo } from 'net'
 const app = express()
 
 app.use((req, res) => {
-    res.send(`${+new Date()}`)
+    const { headers, hostname, originalUrl, url, path } = req
+    const date = (new Date()).toISOString()
+    res.send({ headers, hostname, originalUrl, url, path, date })
 })
 
 const server = app.listen(process.env.PORT || 3000, () => {
